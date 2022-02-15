@@ -12,8 +12,9 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
   seed: (req, res) => {
-    sequelize.query(
-      `
+    sequelize
+      .query(
+        `
             drop table if exists dogs;
             drop table if exists breeds;
             drop table if exists commands;
@@ -38,6 +39,13 @@ module.exports = {
                 desc text
             );
             `
-    );
+      )
+      .then(() => {
+        console.log("created tables");
+        res.sendStatus(200);
+      })
+      .catch((err) => {
+        console.log("error creating tables", err);
+      });
   },
 };
