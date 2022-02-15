@@ -32,12 +32,15 @@ module.exports = {
                 level int not null
             );
 
-            create table Commands (
+            create table commands (
                 command_id serial primary key,
                 name varchar(255),
                 level int not null
                 desc text
             );
+
+            insert into commands ( name, level,desc) 
+            values ('sit', 1, 'you can lightly nudge dogs behind down to force a sit')
             `
       )
       .then(() => {

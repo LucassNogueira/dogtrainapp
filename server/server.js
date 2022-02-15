@@ -5,7 +5,7 @@ const path = require("path");
 const { seed } = require("./seed.js");
 const { SERVER_PORT } = process.env;
 const app = express();
-const {} = require("./controller.js");
+//const {BRING IN FUNCTIONS FROM CONTROLER LATER} = require("./controller.js");
 //
 //
 //
