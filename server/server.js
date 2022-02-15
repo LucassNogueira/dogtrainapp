@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 //
+const port = process.env.PORT || SERVER_PORT;
 app.listen(SERVER_PORT, () =>
   console.log(`We slappin on port: ${SERVER_PORT}`)
 );
