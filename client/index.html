@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Doggo Training</title>
   </head>
-  <header><nav></nav></header>
 
   <body>
     <h1>Howdy lets get started!</h1>
+
+    <h2>Dogs in Training</h2>
+    <container id="current-dogs"></container>
     <button class="dog-button" onclick="openForm()">Add dog</button>
 
     <div class="form-popup" id="adddog">
@@ -70,6 +72,7 @@
         document.getElementById("adddog").style.display = "none";
       }
     </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
