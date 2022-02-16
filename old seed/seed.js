@@ -19,7 +19,7 @@ module.exports = {
             drop table if exists breeds;
             drop table if exists commands;
 
-            create table breeds(
+            create table breeds (
                 breed_id serial primary key,
                 breed_name varchar(255),
                 img_url varchar(255)
