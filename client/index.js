@@ -1,6 +1,9 @@
 const dogForm = document.querySelector("#dog-form");
 const dogContainer = document.querySelector("#current-dogs");
 
+/////////////////////////////////
+////////////////////////////////
+////////////////////////////////
 const createDog = (body) => {
   axios.post(`/api/adddog`, body).then((res) => {
     const data = res.data;
@@ -57,15 +60,15 @@ function createDogCard(newDog) {
   trainBtn.addEventListener("click", () => {
     let level = newDog.level;
     if (level == 1) {
-      window.location.href = "http://localhost:5500/level1.html";
+      window.location.href = `http://localhost:5500/level1.html?dogId=${newDog.id}`;
     } else if (level == 2) {
-      window.location.href = "http://localhost:5500/level2.html";
+      window.location.href = `http://localhost:5500/level2.html?dogId=${newDog.id}`;
     } else if (level == 3) {
-      window.location.href = "http://localhost:5500/level3.html";
+      window.location.href = `http://localhost:5500/level3.html?dogId=${newDog.id}`;
     } else if (level == 4) {
-      window.location.href = "http://localhost:5500/level4.html";
+      window.location.href = `http://localhost:5500/level4.html?dogId=${newDog.id}`;
     } else if (level == 5) {
-      window.location.href = "http://localhost:5500/level5.html";
+      window.location.href = `http://localhost:5500/level5.html?dogId=${newDog.id}`;
     }
   });
 }
@@ -74,7 +77,6 @@ function createDogCard(newDog) {
 function openForm() {
   document.getElementById("adddog").style.display = "block";
 }
-
 function closeForm() {
   document.getElementById("adddog").style.display = "none";
 }
