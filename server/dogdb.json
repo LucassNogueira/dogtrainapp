@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Ryan",
+    "breed": "Bernese Mountain Dog",
+    "level": 4,
+    "imageURL": "https://cdn.mos.cms.futurecdn.net/fYDLid8ZUVTP4mAuqvPMhc.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Ben",
+    "breed": "Pug",
+    "level": 4,
+    "imageURL": "https://a-z-animals.com/media/Pug-Canis-familiaris-face.jpg"
+  }
+]

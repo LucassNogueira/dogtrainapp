@@ -15,12 +15,12 @@ const comeCommand = () => {
   const comeCard = document.createElement("div");
   comeCard.classList.add("come-card");
   comeCnt.innerHTML = "";
-  comeCard.innerHTML = `<p class="come-p">For come, simply put your dog on a leash and say the command while you tug lightly on their leash. When he or she comes to you, reward them with a treat. This direction will take consecutive days of training, so be patient.</p><button onclick="removecome()">Close</button>`;
+  comeCard.innerHTML = `<p class="come-p">For come, simply put your dog on a leash and say the command while you tug lightly on their leash. When he or she comes to you, reward them with a treat. This direction will take consecutive days of training, so be patient.</p><button onclick="removeCome()">Close</button>`;
 
   comeCnt.appendChild(comeCard);
 };
 comeCmmd.addEventListener("click", comeCommand);
-const removecome = () => {
+const removeCome = () => {
   comeCnt.innerHTML = "";
 };
 ///////////////////////////////////////////////
@@ -31,12 +31,12 @@ const sitCommand = () => {
   const sitCard = document.createElement("div");
   sitCard.classList.add("sit-card");
   sitCnt.innerHTML = "";
-  sitCard.innerHTML = `<p class="sit-p"> Hold a treat close to your dog's nose. Move your hand up, allowing his head to follow the treat and causing his bottom to lower. Once he's in sitting position, say “Sit,” give him the treat, and share affection.</p><button onclick="remove()">Close</button>`;
+  sitCard.innerHTML = `<p class="sit-p"> Hold a treat close to your dog's nose. Move your hand up, allowing his head to follow the treat and causing his bottom to lower. Once he's in sitting position, say “Sit,” give him the treat, and share affection.</p><button onclick="removeSit()">Close</button>`;
 
   sitCnt.appendChild(sitCard);
 };
 sitCmmd.addEventListener("click", sitCommand);
-const remove = () => {
+const removeSit = () => {
   sitCnt.innerHTML = "";
 };
 //
@@ -44,12 +44,12 @@ const shakeCommand = () => {
   const shakeCard = document.createElement("div");
   shakeCard.classList.add("shake-card");
   shakeCnt.innerHTML = "";
-  shakeCard.innerHTML = `<p class="sit-p"> Hold a treat close to your dog's nose. Move your hand up, allowing his head to follow the treat and causing his bottom to lower. Once he's in sitting position, say “Sit,” give him the treat, and share affection.</p><button onclick="remove()">Close</button>`;
+  shakeCard.innerHTML = `<p class="sit-p"> Hold a treat close to your dog's nose. Move your hand up, allowing his head to follow the treat and causing his bottom to lower. Once he's in sitting position, say “Sit,” give him the treat, and share affection.</p><button onclick="removeShake()">Close</button>`;
 
   shakeCnt.appendChild(shakeCard);
 };
 shakeCmmd.addEventListener("click", shakeCommand);
-const remove = () => {
+const removeShake = () => {
   shakeCnt.innerHTML = "";
 };
 

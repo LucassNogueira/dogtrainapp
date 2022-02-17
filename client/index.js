@@ -1,20 +1,67 @@
 const dogForm = document.querySelector("#dog-form");
 const dogContainer = document.querySelector("#current-dogs");
-
+const getDogsbtn = document.querySelector("#seeallbtn");
 /////////////////////////////////
+
+const dogArrCallback = ({ data: Dogs }) => displayDogs(Dogs);
+const getAllDogs = () => {
+  axios
+    .post("/alldogs")
+    .then(dogArrCallback)
+    .catch((err) => console.log(err));
+};
+function displayDogs(arr) {
+  dogContainer.innerHTML = ``;
+  for (let i = 0; i < arr.length; i++) {
+    createDogCard(arr[i]);
+  }
+}
+
+function createDogCard(newDog) {
+  const dogCard = document.createElement("div");
+  dogCard.classList.add("dog-card");
+  dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
+  <p class="name">Dog Name: ${newDog.name}</p>
+  <p class="breed">Breed: ${newDog.breed}</p>
+  <p class="skill">Level: ${newDog.level}</p>
+  <div class="train-btn"><button id="train-btn" >train ${newDog.name}</button>
+  <button id="remove-btn" onclick="deleteDog(${newDog})">Remove ${newDog.name}</button><div>
+  `;
+
+  dogContainer.appendChild(dogCard);
+  const trainBtn = document.querySelector("#train-btn");
+  trainBtn.addEventListener("click", () => {
+    let level = newDog.level;
+    if (level == 1) {
+      window.location.href = `http://localhost:5500/level1.html?dogId=${newDog.id}`;
+    } else if (level == 2) {
+      window.location.href = `http://localhost:5500/level2.html?dogId=${newDog.id}`;
+    } else if (level == 3) {
+      window.location.href = `http://localhost:5500/level3.html?dogId=${newDog.id}`;
+    } else if (level == 4) {
+      window.location.href = `http://localhost:5500/level4.html?dogId=${newDog.id}`;
+    } else if (level == 5) {
+      window.location.href = `http://localhost:5500/level5.html?dogId=${newDog.id}`;
+    }
+  });
+}
+
 ////////////////////////////////
 ////////////////////////////////
 const createDog = (body) => {
-  axios.post(`/api/adddog`, body).then((res) => {
+  axios.post(`/`, body).then((res) => {
     const data = res.data;
-    alert("New pup added!");
     console.log(data);
+    alert("New pup added!");
     dogContainer.innerHTML = "";
     for (let i = 0; i < data.length; i++) {
       createDogCard(data[i]);
     }
   });
 };
+////////////////////////////////
+getDogsbtn.addEventListener("click", getAllDogs);
+////////////////////////////////////////////////////////////////
 
 function submitHandler(e) {
   e.preventDefault();
@@ -44,35 +91,46 @@ function submitHandler(e) {
 
 dogForm.addEventListener("submit", submitHandler);
 
-function createDogCard(newDog) {
-  const dogCard = document.createElement("div");
-  dogCard.classList.add("dog-card");
-  dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
-  <p class="name">Dog Name: ${newDog.name}</p>
-  <p class="breed">Breed: ${newDog.breed}</p>
-  <p class="skill">Level: ${newDog.level}</p>
-  <div class="train-btn"><button id="train-btn">train ${newDog.name}</button>
-  <button class="remove-btn">Remove ${newDog.name}</button><div>
-  `;
+// function createDogCard(newDog) {
+//   const dogCard = document.createElement("div");
+//   dogCard.classList.add("dog-card");
+//   dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
+//   <p class="name">Dog Name: ${newDog.name}</p>
+//   <p class="breed">Breed: ${newDog.breed}</p>
+//   <p class="skill">Level: ${newDog.level}</p>
+//   <div class="train-btn"><button id="train-btn">train ${newDog.name}</button>
+//   <button id="remove-btn" onclick="deleteDog(${newDog.id})">Remove ${newDog.name}</button><div>
+//   `;
 
-  dogContainer.appendChild(dogCard);
-  const trainBtn = document.querySelector("#train-btn");
-  trainBtn.addEventListener("click", () => {
-    let level = newDog.level;
-    if (level == 1) {
-      window.location.href = `http://localhost:5500/level1.html?dogId=${newDog.id}`;
-    } else if (level == 2) {
-      window.location.href = `http://localhost:5500/level2.html?dogId=${newDog.id}`;
-    } else if (level == 3) {
-      window.location.href = `http://localhost:5500/level3.html?dogId=${newDog.id}`;
-    } else if (level == 4) {
-      window.location.href = `http://localhost:5500/level4.html?dogId=${newDog.id}`;
-    } else if (level == 5) {
-      window.location.href = `http://localhost:5500/level5.html?dogId=${newDog.id}`;
-    }
-  });
-}
-
+//   dogContainer.appendChild(dogCard);
+//   const trainBtn = document.querySelector("#train-btn");
+//   trainBtn.addEventListener("click", () => {
+//     let level = newDog.level;
+//     if (level == 1) {
+//       window.location.href = `http://localhost:5500/level1.html?dogId=${newDog.id}`;
+//     } else if (level == 2) {
+//       window.location.href = `http://localhost:5500/level2.html?dogId=${newDog.id}`;
+//     } else if (level == 3) {
+//       window.location.href = `http://localhost:5500/level3.html?dogId=${newDog.id}`;
+//     } else if (level == 4) {
+//       window.location.href = `http://localhost:5500/level4.html?dogId=${newDog.id}`;
+//     } else if (level == 5) {
+//       window.location.href = `http://localhost:5500/level5.html?dogId=${newDog.id}`;
+//     }
+//     // const removeBtn = document.querySelector("#remove-btn");
+//     // removeBtn.addEventListener("click", () => {
+//     //   console.log("hit");
+//     //   axios
+//     //     .delete(`/api/deletedog/${newDog.id}`)
+//     //     .then()
+//     //     .catch((err) => console.log(err));
+//     // });
+//   });
+// }
+//
+const deleteDog = (id) => {
+  axios.delete(`/alldogs/${id}`).then(dogArrCallback);
+};
 //
 function openForm() {
   document.getElementById("adddog").style.display = "block";

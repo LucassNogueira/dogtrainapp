@@ -1,7 +1,10 @@
 const dogsArr = require("./dogdb.json");
 const path = require("path");
-let dogId = 2;
+let dogId = 3;
 module.exports = {
+  getDogs: (req, res) => {
+    res.status(200).send(dogsArr);
+  },
   createDog: (req, res) => {
     let { name, breed, level, imageURL } = req.body;
     let newDog = {
@@ -26,5 +29,11 @@ module.exports = {
       dogId: dogId,
       level: dogsArr[index].level,
     });
+  },
+  deleteDog: (req, res) => {
+    const dogId = +req.params.dogId;
+    let index = dogsArr.findIndex((dogObj) => +dogObj.id === dogId);
+    dogsArr.splice(index, 1);
+    res.status(200).send(dogsArr);
   },
 };
