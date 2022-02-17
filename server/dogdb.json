@@ -10,7 +10,14 @@
     "id": 2,
     "name": "Ben",
     "breed": "Pug",
-    "level": 3,
+    "level": 2,
     "imageURL": "https://a-z-animals.com/media/Pug-Canis-familiaris-face.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Will",
+    "breed": "Rottweiler",
+    "level": 3,
+    "imageURL": "https://www.regaldog.co.uk/wp-content/uploads/2021/10/Rottweiler-With-Gold-Chain.jpg"
   }
 ]

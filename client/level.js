@@ -58,13 +58,18 @@ const removeShake = () => {
 ////////////////////////////////
 ////////////////////////////////
 const incLevel = () => {
-  let dogId = window.location.href.substring(window.location.href.length - 1);
-  axios
-    .put(`/api/level/${dogId}`)
-    .then((res) => {
-      window.location.href = `/level${res.data.level}.html?dogId=${res.data.dogId}`;
-    })
-    .catch((err) => console.log(err));
+  let text = "Are you sure you want to level up?";
+  if (window.confirm(text) == false) {
+    return;
+  } else {
+    let dogId = window.location.href.substring(window.location.href.length - 1);
+    axios
+      .put(`/api/level/${dogId}`)
+      .then((res) => {
+        window.location.href = `/level${res.data.level}.html?dogId=${res.data.dogId}`;
+      })
+      .catch((err) => console.log(err));
+  }
 };
 
 levelUpBtn.addEventListener("click", incLevel);

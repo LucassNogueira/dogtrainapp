@@ -1,6 +1,6 @@
 const dogsArr = require("./dogdb.json");
 const path = require("path");
-let dogId = 3;
+let dogId = 4;
 module.exports = {
   getDogs: (req, res) => {
     res.status(200).send(dogsArr);
