@@ -7,6 +7,7 @@ const {
   increaseLevel,
   deleteDog,
   getDogs,
+  trainDog,
 } = require("./controller.js");
 const { SERVER_PORT } = process.env;
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.static("client"));
 //
 
 //
+app.get("/api/train/:dogId", trainDog);
 //
 app.post("/dogs", getDogs);
 //

@@ -36,4 +36,9 @@ module.exports = {
     dogsArr.splice(index, 1);
     res.status(200).send(dogsArr);
   },
+  trainDog: (req, res) => {
+    const dogId = +req.params.dogId;
+    let index = dogsArr.findIndex((dogObj) => +dogObj.id === dogId);
+    res.status(200).send(dogsArr[index]);
+  },
 };
