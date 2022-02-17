@@ -87,7 +87,7 @@ const Confirm = {
         <div class="confirm">
           <div class="confirm__window">
             <div class="confirm__titlebar">
-              <span class="confirm__title">Are you sure you want to level up?</span>
+              <span class="confirm__title">Are you sure you want to level up</span>
               <button class="confirm__close">&times;</button>
             </div>
             <div class="confirm__content">
@@ -110,7 +110,6 @@ const Confirm = {
     `;
     const template = document.createElement("template");
     template.innerHTML = html;
-    //elements
     const confirmEl = template.content.querySelector(".confirm");
     const btnClose = template.content.querySelector(".confirm__close");
     const btnOk = template.content.querySelector(".confirm__button--ok");

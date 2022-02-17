@@ -12,9 +12,11 @@
     <h1>Howdy lets get started!</h1>
 
     <h2>Dogs in Training</h2>
-    <container id="current-dogs"></container>
-    <button class="dog-button" onclick="openForm()">Add dog</button>
-    <button class="dog-button2" id="seeallbtn">See All Dogs</button>
+
+    <container id="bot-buttons">
+      <button class="dog-button" onclick="openForm()">Add dog</button>
+      <button class="dog-button2" id="seeallbtn">See All Dogs</button>
+    </container>
     <div class="form-popup" id="adddog">
       <form class="form-container" id="dog-form">
         <h1>Add a new doggo!</h1>
@@ -63,6 +65,7 @@
         </button>
       </form>
     </div>
+    <container id="current-dogs"></container>
     <script>
       function openForm() {
         document.getElementById("adddog").style.display = "block";
