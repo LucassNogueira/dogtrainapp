@@ -76,12 +76,11 @@ function submitHandler(e) {
   e.preventDefault();
 
   let dogName = document.querySelector("#dog-name");
-  let dogBreed = document.querySelector("#dog-breed");
+  let dogBreed = document.querySelector("#dog-selector");
   let dogLevel = document.querySelector(
     "input[name=skill-level]:checked"
   ).value;
   let imageURL = document.querySelector("#img");
-
   let bodyObj = {
     name: dogName.value,
     breed: dogBreed.value,
@@ -92,7 +91,7 @@ function submitHandler(e) {
   createDog(bodyObj);
 
   dogName.value = "";
-  dogBreed.value = "";
+  dogBreed = "";
   dogLevel = null;
   imageURL.value = "";
   closeForm();
