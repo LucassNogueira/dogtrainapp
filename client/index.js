@@ -56,6 +56,7 @@ const createDog = (body) => {
 
 function createDogCard(newDog) {
   const dogCard = document.createElement("div");
+  console.log(newDog);
   dogCard.classList.add("dog-card");
   dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
   <p class="name">Dog Name: ${newDog.name}</p>
@@ -80,20 +81,23 @@ function submitHandler(e) {
   let dogLevel = document.querySelector(
     "input[name=skill-level]:checked"
   ).value;
-  let imageURL = document.querySelector("#img");
   let bodyObj = {
     name: dogName.value,
     breed: dogBreed.value,
     level: dogLevel,
-    imageURL: imageURL.value,
+    imageURL: "",
   };
+  axios
+    .get(`https://dog.ceo/api/breed/${dogBreed.value}/images/random`)
+    .then((res) => {
+      bodyObj.imageURL = res.data.message;
+      console.log(bodyObj);
+      createDog(bodyObj);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
-  createDog(bodyObj);
-
-  dogName.value = "";
-  dogBreed = "";
-  dogLevel = null;
-  imageURL.value = "";
   closeForm();
 }
 
