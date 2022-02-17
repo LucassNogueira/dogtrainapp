@@ -21,15 +21,15 @@ app.use(express.static("client"));
 
 //
 //
-app.post("/alldogs", getDogs);
+app.post("/dogs", getDogs);
 //
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/index.html"));
 });
-app.post("/", createDog);
+app.post("/api/adddog", createDog);
 
 app.put("/api/level/:dogId", increaseLevel);
-app.delete("/alldogs/:dogId", deleteDog);
+app.delete("/api/:dogId", deleteDog);
 
 //
 const port = process.env.PORT || SERVER_PORT;
