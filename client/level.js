@@ -62,7 +62,7 @@ const incLevel = () => {
   axios
     .put(`/api/level/${dogId}`)
     .then((res) => {
-      window.location.href = `http://localhost:5500/level${res.data.level}.html?dogId=${res.data.dogId}`;
+      window.location.href = `/level${res.data.level}.html?dogId=${res.data.dogId}`;
     })
     .catch((err) => console.log(err));
 };
