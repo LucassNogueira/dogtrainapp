@@ -1,8 +1,9 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: LEMON MILK;
 }
 * {
   box-sizing: border-box;
+  font-family: LEMON MILK;
 }
 
 .dog-button {
@@ -114,6 +115,87 @@ body {
 .confirm--close {
   animation-name: confirm---close;
 }
+
+.confirm__window {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  font-size: 14px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.75);
+  animation-name: confirm__window---open;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+
+.confirm__titlebar,
+.confirm__content,
+.confirm__buttons {
+  padding: 1.25em;
+}
+
+.confirm__titlebar {
+  background: #222222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirm__title {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.confirm__close {
+  background: none;
+  outline: none;
+  border: none;
+  transform: scale(2.5);
+  color: white;
+  transition: color 0.15s;
+}
+
+.confirm__close:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.confirm__content {
+  line-height: 1.8em;
+}
+
+.confirm__buttons {
+  background: #eeeeee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirm__button {
+  padding: 0.4em 0.8em;
+  border: 2px solid black; /*use background theme for this color to make it look best */
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: LEMON MILK;
+  margin-left: 0.6em;
+  cursor: pointer;
+  outline: none;
+}
+.confirm__button--fill {
+  background: black;
+  color: white;
+}
+
+.confirm__button:focus {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
 @keyframes confirm---open {
   from {
     opacity: 0;
@@ -129,5 +211,12 @@ body {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes confirm__window---open {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
