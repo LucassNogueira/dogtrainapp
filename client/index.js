@@ -43,7 +43,6 @@ function displayDogs(arr) {
 const createDog = (body) => {
   axios.post(`/api/adddog`, body).then((res) => {
     const data = res.data;
-    alert("New pup added!");
     dogContainer.innerHTML = "";
     for (let i = 0; i < data.length; i++) {
       createDogCard(data[i]);
@@ -56,7 +55,7 @@ const createDog = (body) => {
 
 function createDogCard(newDog) {
   const dogCard = document.createElement("div");
-  console.log(newDog);
+  // console.log(newDog);
   dogCard.classList.add("dog-card");
   dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
   <p class="name">Dog Name: ${newDog.name}</p>
@@ -91,7 +90,7 @@ function submitHandler(e) {
     .get(`https://dog.ceo/api/breed/${dogBreed.value}/images/random`)
     .then((res) => {
       bodyObj.imageURL = res.data.message;
-      console.log(bodyObj);
+      // console.log(bodyObj);
       createDog(bodyObj);
     })
     .catch((err) => {

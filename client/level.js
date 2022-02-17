@@ -149,11 +149,12 @@ const Confirm = {
 
 document.querySelector("#level-up").addEventListener("click", () => {
   Confirm.open({
-    title: "Leveling up",
-    message: "Are you sure you want to level up?",
     onok: () => {
       incLevel();
     },
     oncancel: () => {},
   });
 });
+
+////
+////////////////////////////////
