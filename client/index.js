@@ -68,7 +68,7 @@ function createDogCard(newDog) {
   const dogCard = document.createElement("div");
   dogCard.classList.add("dog-card");
   dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
-  <p class="name">Dog Name: ${newDog.name}</p>
+  <h3 class="name">Dog Name: ${newDog.name}</h3>
   <p class="breed">Breed: ${newDog.breed}</p>
   <p class="skill">Level: ${newDog.level}</p>
   <div class="train-btn"><button id="train-btn" onclick="train(${newDog.id})">train ${newDog.name}</button>

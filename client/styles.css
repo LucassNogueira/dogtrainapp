@@ -1,6 +1,3 @@
-body {
-  font-family: LEMON MILK;
-}
 * {
   font-family: LEMON MILK;
   box-sizing: border-box;
@@ -24,7 +21,7 @@ body {
 #navbar-logo {
   color: White;
   justify-self: start;
-  margin-left: -10px;
+  margin-left: -60px;
   cursor: pointer;
 }
 #navbar-logo:hover {
