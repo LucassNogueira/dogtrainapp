@@ -111,17 +111,10 @@ function closeForm() {
   document.getElementById("adddog").style.display = "none";
 }
 
-const imageInput = document.querySelector("#image_input");
-let uploadedImage;
+const menu = document.querySelector("#mobile-menu");
+const menuLinks = document.querySelector(".nav-menu");
 
-imageInput.addEventListener("change", function () {
-  const reader = new FileReader();
-  reader.addEventListener("load", () => {
-    uploadedImage = reader.result;
-    console.log(reader.result);
-    document.querySelector(
-      ".dog-cover-image"
-    ).style.backgroundImage = `url(${uploadedImage})`;
-  });
-  reader.readAsDataURL(this.files[0]);
+menu.addEventListener("click", () => {
+  menu.classList.toggle("is-active");
+  menuLinks.classList.toggle("active");
 });

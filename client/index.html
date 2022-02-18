@@ -9,17 +9,28 @@
   </head>
 
   <body>
-    <h1>Howdy lets get started!</h1>
-    <div class="input-container">
-      <input type="file" id="image_input" accept="image/png, image/jpg" />
-      <div id="display_image"></div>
-    </div>
-    <h2>Dogs in Training</h2>
-
-    <container id="bot-buttons">
-      <button class="dog-button" onclick="openForm()">Add dog</button>
-      <button class="dog-button2" id="seeallbtn">See All Dogs</button>
-    </container>
+    <header class="nav-container">
+      <nav class="navbar">
+        <h1 onclick="location.href='index.html'" id="navbar-logo">PogDog</h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <snap class="bar"></snap>
+          <snap class="bar"></snap>
+          <snap class="bar"></snap>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-links">Home</a></li>
+          <li>
+            <button class="nav-links" onclick="openForm()">Add dog</button>
+          </li>
+          <li>
+            <button class="nav-links" id="seeallbtn">See All Dogs</button>
+          </li>
+          <li><a href="#" class="nav-links">About Us</a></li>
+          <li><a href="#" class="nav-links">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <container id="bot-buttons"> </container>
     <div class="form-popup" id="adddog">
       <form class="form-container" id="dog-form">
         <h1>Add a new doggo!</h1>
@@ -185,6 +196,7 @@
           <option value="wolfhound/irish">irish wolfhound</option>
         </select>
         <br />
+        <input type="file" id="image_input" accept="image/png, image/jpg" />
         <!-- <label for="img"><b>Picture URL</b></label>
         <input
           id="img"

@@ -12,6 +12,27 @@
     <title>Level 1 Training</title>
   </head>
   <body>
+    <header class="nav-container">
+      <nav class="navbar">
+        <h1 onclick="location.href='index.html'" id="navbar-logo">PogDog</h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <snap class="bar"></snap>
+          <snap class="bar"></snap>
+          <snap class="bar"></snap>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-links">Home</a></li>
+          <li>
+            <button class="nav-links" onclick="openForm()">Add dog</button>
+          </li>
+          <li>
+            <button class="nav-links" id="seeallbtn">See All Dogs</button>
+          </li>
+          <li><a href="#" class="nav-links">About Us</a></li>
+          <li><a href="#" class="nav-links">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
     <container id="level1btns">
       <button id="come-command" type="button">Come</button>
       <container id="come-cnt"></container>
