@@ -143,35 +143,6 @@ body {
   display: flex;
   flex-direction: row;
 }
-/* .bot-buttons {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.dog-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 5px;
-  width: 280px;
-}
-.dog-button2 {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 330px;
-  width: 280px;
-} */
 
 .form-popup {
   display: none;
@@ -420,4 +391,12 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+#displayImage {
+  width: 400px;
+  height: 225px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
 }

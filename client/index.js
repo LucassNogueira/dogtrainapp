@@ -37,7 +37,6 @@ function displayDogs(arr) {
     createDogCard(arr[i]);
   }
 }
-
 ////////////////////////////////
 ////////////////////////////////
 const createDog = (body) => {
@@ -49,13 +48,24 @@ const createDog = (body) => {
     }
   });
 };
-////////////////////////////////
 
-//
+//////////////////ADDING IMAGE//////////////////////////
+const imageInput = document.querySelector("#imageInput");
+let uploadedImage;
 
+imageInput.addEventListener("change", function () {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    uploadedImage = reader.result;
+    document.querySelector(
+      "#displayImage"
+    ).style.backgroundImage = `url(${uploadedImage})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+////////////CREATING DOG CARD////////
 function createDogCard(newDog) {
   const dogCard = document.createElement("div");
-  // console.log(newDog);
   dogCard.classList.add("dog-card");
   dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
   <p class="name">Dog Name: ${newDog.name}</p>
@@ -67,11 +77,10 @@ function createDogCard(newDog) {
 
   dogContainer.appendChild(dogCard);
 }
-
 ////////////////////////////////
 getDogsbtn.addEventListener("click", getAllDogs);
-////////////////////////////////////////////////////////////////
 
+/// processing submit data ////
 function submitHandler(e) {
   e.preventDefault();
 
@@ -99,11 +108,10 @@ function submitHandler(e) {
 
   closeForm();
 }
-
 dogForm.addEventListener("submit", submitHandler);
 
 //
-//
+// FORM FUNCTION
 function openForm() {
   document.getElementById("adddog").style.display = "block";
 }
@@ -111,9 +119,9 @@ function closeForm() {
   document.getElementById("adddog").style.display = "none";
 }
 
+// MENU STUFF //
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".nav-menu");
-
 menu.addEventListener("click", () => {
   menu.classList.toggle("is-active");
   menuLinks.classList.toggle("active");
