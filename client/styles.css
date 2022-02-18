@@ -31,7 +31,7 @@
 }
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(2, auto);
   list-style: none;
   text-align: center;
   width: 70%;
@@ -134,12 +134,13 @@
   }
 }
 
-.current-dogs {
+/* .current-dogs {
+  border: solid 1px black;
   height: 800px;
   width: 500px;
   display: flex;
   flex-direction: row;
-}
+} */
 
 .form-popup {
   display: none;
@@ -190,18 +191,6 @@
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
-}
-
-.dog-cover-image {
-  width: 300px;
-  height: 300px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.current-dogs {
-  display: flex;
-  align-items: center;
 }
 
 .confirm {
@@ -371,22 +360,49 @@
   height: 100vh;
 }
 
-#display_image {
-  width: 350px;
-  height: 225px;
-  border: 1px solid black;
-  background-position: center;
-  background-size: cover;
-}
-
 .dog-card {
-  border: 2px solid black;
-  padding: 5px 5px;
+  /* border: solid 1px black; */
+  padding-bottom: 10px;
   margin: 25px;
-  width: 350px;
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
+  width: 320px;
+  height: 428px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(241, 193, 193);
+}
+#train-btn,
+#remove-btn {
+  /* padding: 5px;
+  display: inline-flex;
+  justify-content: space-evenly; */
+  border: none;
+  color: #090909;
+  padding: 8px;
+
+  border-radius: 30px;
+  background: #e8e8e8;
+  border: 1px solid #000000;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #818181;
+}
+#train-btn:active,
+#remove-btn:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.dog-cover-image {
+  width: 320px;
+  height: 428px;
+  border-radius: 30px;
+}
+
+.current-dogs {
+  display: flex;
   align-items: center;
 }
 
@@ -396,4 +412,19 @@
   border: 1px solid black;
   background-position: center;
   background-size: cover;
+}
+
+.shake-card {
+  /* border: solid 1px black; */
+  padding-bottom: 10px;
+  margin: 25px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 320px;
+  height: 428px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(241, 193, 193);
 }

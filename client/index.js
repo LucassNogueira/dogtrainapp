@@ -50,26 +50,28 @@ const createDog = (body) => {
 };
 
 //////////////////ADDING IMAGE//////////////////////////
-const imageInput = document.querySelector("#imageInput");
-let uploadedImage;
 
-imageInput.addEventListener("change", function () {
-  const reader = new FileReader();
-  reader.addEventListener("load", () => {
-    uploadedImage = reader.result;
-    document.querySelector(
-      "#displayImage"
-    ).style.backgroundImage = `url(${uploadedImage})`;
-  });
-  reader.readAsDataURL(this.files[0]);
-});
+// const imageInput = document.querySelector("#imageInput");
+// let uploadedImage;
+
+// imageInput.addEventListener("change", function () {
+//   const reader = new FileReader();
+//   reader.addEventListener("load", () => {
+//     uploadedImage = reader.result;
+//     document.querySelector(
+//       "#displayImage"
+//     ).style.backgroundImage = `url(${uploadedImage})`;
+//   });
+//   reader.readAsDataURL(this.files[0]);
+// });
 ////////////CREATING DOG CARD////////
+
 function createDogCard(newDog) {
   const dogCard = document.createElement("div");
   dogCard.classList.add("dog-card");
   dogCard.innerHTML = `<img alt='dog cover image' src=${newDog.imageURL} class="dog-cover-image"/>
-  <h3 class="name">Dog Name: ${newDog.name}</h3>
-  <p class="breed">Breed: ${newDog.breed}</p>
+  <h3 class="name">${newDog.name}</h3>
+  <p class="breed">${newDog.breed}</p>
   <p class="skill">Level: ${newDog.level}</p>
   <div class="train-btn"><button id="train-btn" onclick="train(${newDog.id})">train ${newDog.name}</button>
   <button id="remove-btn" onclick="deleteDog(${newDog.id})">Remove ${newDog.name}</button><div>
@@ -80,7 +82,7 @@ function createDogCard(newDog) {
 ////////////////////////////////
 getDogsbtn.addEventListener("click", getAllDogs);
 
-/// processing submit data ////
+/*// processing submit data AXIOS////
 function submitHandler(e) {
   e.preventDefault();
 
@@ -108,6 +110,27 @@ function submitHandler(e) {
 
   closeForm();
 }
+*/
+function submitHandler(e) {
+  e.preventDefault();
+
+  let dogName = document.querySelector("#dog-name");
+  let dogBreed = document.querySelector("#dog-selector");
+  let dogLevel = document.querySelector("input[name=skill-level]:checked");
+  let imageURL = document.querySelector("#img");
+
+  let bodyObj = {
+    name: dogName.value,
+    breed: dogBreed.value,
+    level: dogLevel.value,
+    imageURL: imageURL.value,
+  };
+
+  createDog(bodyObj);
+
+  closeForm();
+}
+
 dogForm.addEventListener("submit", submitHandler);
 
 //

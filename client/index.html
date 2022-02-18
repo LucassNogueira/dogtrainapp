@@ -23,20 +23,17 @@
           <snap class="bar"></snap>
         </div>
         <ul class="nav-menu">
-          <li><a href="home.html" class="nav-links">Home</a></li>
           <li>
             <button class="nav-links" onclick="openForm()">Add dog</button>
           </li>
           <li>
             <button class="nav-links" id="seeallbtn">See All Dogs</button>
           </li>
-          <li><a href="about.html" class="nav-links">About Us</a></li>
-          <li><a href="contact.html" class="nav-links">Contact Us</a></li>
         </ul>
       </nav>
     </header>
-    <input type="file" id="imageInput" accept="image/png, image/jpg" />
-    <div id="displayImage"></div>
+    <!-- <input type="file" id="imageInput" accept="image/png, image/jpg" />
+    <div id="displayImage"></div> -->
     <div class="form-popup" id="adddog">
       <form class="form-container" id="dog-form">
         <h1>Add a new doggo!</h1>
@@ -54,12 +51,13 @@
         <br />
 
         <select id="dog-selector">
+          <option>--Select Dog Breed--</option>
           <option value="affenpinscher">affenpinscher</option>
           <option value="african">african</option>
           <option value="airedale">airedale</option>
           <option value="akita">akita</option>
           <option value="appenzeller">appenzeller</option>
-          <option value="australian/shepherd">shepherd australian</option>
+          <option value="shepherd australian">shepherd australian</option>
           <option value="basenji">basenji</option>
           <option value="beagle">beagle</option>
           <option value="bluetick">bluetick</option>
@@ -68,8 +66,8 @@
           <option value="boxer">boxer</option>
           <option value="brabancon">brabancon</option>
           <option value="briard">briard</option>
-          <option value="buhund-norwegian">norwegian buhund</option>
-          <option value="bulldog/boston">boston bulldog</option>
+          <option value="norwegian buhund">norwegian buhund</option>
+          <option value="boston bulldog">boston bulldog</option>
           <option value="bulldog/english">english bulldog</option>
           <option value="bulldog/french">french bulldog</option>
           <option value="bullterrier/staffordshire">
@@ -147,7 +145,7 @@
           <option value="retriever/chesapeake">chesapeake retriever</option>
           <option value="retriever/curly">curly retriever</option>
           <option value="retriever/flatcoated">flatcoated retriever</option>
-          <option value="retriever/golden">golden retriever</option>
+          <option value="Golden Retriever">golden retriever</option>
           <option value="ridgeback/rhodesian">rhodesian ridgeback</option>
           <option value="rottweiler">rottweiler</option>
           <option value="saluki">saluki</option>
@@ -203,14 +201,14 @@
         </select>
         <br />
         <!-- <input type="file" id="image_input" accept="image/png, image/jpg" /> -->
-        <!-- <label for="img"><b>Picture URL</b></label>
+        <label for="img"><b>Picture URL</b></label>
         <input
           id="img"
           type="text"
           placeholder="Enter a picture URL"
           name="pic"
           required
-        /> -->
+        />
         <label for="level"><b>Skill Level</b></label>
         <input type="radio" id="Choice1" name="skill-level" value="1" />
         <label>1</label>
