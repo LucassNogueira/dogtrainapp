@@ -278,3 +278,14 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.dog-card {
+  border: 2px solid black;
+  padding: 5px 5px;
+  margin: 25px;
+  width: 350px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
