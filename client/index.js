@@ -117,4 +117,8 @@ const menuLinks = document.querySelector(".nav-menu");
 menu.addEventListener("click", () => {
   menu.classList.toggle("is-active");
   menuLinks.classList.toggle("active");
+  menuLinks.addEventListener("click", () => {
+    menu.classList.remove("is-active");
+    menuLinks.classList.remove("active");
+  });
 });
