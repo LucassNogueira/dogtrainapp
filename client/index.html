@@ -25,7 +25,9 @@
         <ul class="nav-menu">
           <li><a class="nav-links" href="index.html">Home</a></li>
           <li>
-            <button class="nav-links" onclick="openForm()">Add dog</button>
+            <button class="nav-links" onclick="location.href='form.html'">
+              Add dog
+            </button>
           </li>
           <li>
             <button class="nav-links" id="seeallbtn">See All Dogs</button>
@@ -35,7 +37,7 @@
     </header>
     <!-- <input type="file" id="imageInput" accept="image/png, image/jpg" />
     <div id="displayImage"></div> -->
-    <div class="form-popup" id="adddog">
+    <!-- <div class="form-popup" id="adddog">
       <form class="form-container" id="dog-form">
         <h1>Add a new doggo!</h1>
 
@@ -201,7 +203,7 @@
           <option value="wolfhound/irish">irish wolfhound</option>
         </select>
         <br />
-        <!-- <input type="file" id="image_input" accept="image/png, image/jpg" /> -->
+        <input type="file" id="image_input" accept="image/png, image/jpg" />
         <label for="img"><b>Picture URL</b></label>
         <input
           id="img"
@@ -227,9 +229,9 @@
           Close
         </button>
       </form>
-    </div>
+    </div> -->
     <container id="current-dogs"></container>
-    <script>
+    <!-- <script>
       function openForm() {
         document.getElementById("adddog").style.display = "block";
       }
@@ -237,7 +239,7 @@
       function closeForm() {
         document.getElementById("adddog").style.display = "none";
       }
-    </script>
+    </script> -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
   </body>
