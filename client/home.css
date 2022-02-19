@@ -1,0 +1,48 @@
+.home-body {
+  display: flex;
+  /* border: 3px solid black; */
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 50px;
+  height: 600px;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 20px rgb(247, 184, 184);
+  border-radius: 30px;
+}
+
+.left-cont {
+  display: flex;
+  /* border-right: 3px solid black; */
+  align-items: stretch;
+  width: 30%;
+  height: 100%;
+  margin-left: 0px;
+  object-fit: contain;
+  align-items: center;
+  background-color: #807182;
+  position: relative;
+  border-radius: 30px;
+}
+#home-header {
+  display: inline-block;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 70px;
+  top: 30px;
+  left: 65px;
+  text-shadow: 12px 0px 22px black;
+}
+#homedog {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.right-cont {
+  padding: 90px;
+  display: grid;
+  text-align: center;
+  width: 70%;
+  height: 100%;
+}
