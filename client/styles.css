@@ -374,13 +374,13 @@ input[type="radio"] {
   margin: 25px;
   display: inline-flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
   width: 320px;
   height: 428px;
   border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(241, 193, 193);
+  background: #e4eff6;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 20px rgb(247, 184, 184);
 }
 #train-btn,
 #remove-btn {
