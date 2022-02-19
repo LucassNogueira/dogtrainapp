@@ -232,21 +232,16 @@
         <label>5</label>
         <br /><br />
         <button type="submit" class="btn">Submit</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">
+        <button
+          type="button"
+          class="btn cancel"
+          onclick="location.href='index.html'"
+        >
           Close
         </button>
       </form>
     </div>
 
-    <script>
-      function openForm() {
-        document.getElementById("adddog").style.display = "block";
-      }
-
-      function closeForm() {
-        document.getElementById("adddog").style.display = "none";
-      }
-    </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
   </body>
