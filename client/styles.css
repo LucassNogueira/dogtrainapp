@@ -21,7 +21,7 @@
 #navbar-logo {
   color: White;
   justify-self: start;
-  margin-left: -60px;
+  margin-left: 20px;
   cursor: pointer;
 }
 #navbar-logo:hover {
@@ -31,7 +31,7 @@
 }
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, 200px);
   list-style: none;
   text-align: center;
   width: 70%;
@@ -94,7 +94,7 @@
     text-align: center;
     line-height: 60px;
     width: 100%;
-    display: table;
+    display: flex;
   }
 
   .nav-links:hover {
