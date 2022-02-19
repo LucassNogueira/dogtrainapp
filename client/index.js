@@ -127,8 +127,8 @@ function submitHandler(e) {
   };
 
   createDog(bodyObj);
-
   closeForm();
+  location.href = "alldogs.html";
 }
 
 dogForm.addEventListener("submit", submitHandler);
