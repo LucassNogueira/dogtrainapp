@@ -330,10 +330,16 @@ input[type="radio"] {
 }
 
 .timer {
+  margin: 0 auto;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(241, 193, 193);
+
+  border: 3px solid black;
   font-family: sans-serif;
-  display: inline-block;
+  display: inline-flex;
   padding: 24px 32px;
   border-radius: 30px;
+  align-items: center;
 }
 
 .timer__part {
@@ -350,6 +356,7 @@ input[type="radio"] {
   color: White;
   background: purple;
   cursor: pointer;
+  align-items: center;
 }
 
 .timer__btn--start {
@@ -435,4 +442,103 @@ input[type="radio"] {
   border-radius: 30px;
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(241, 193, 193);
+}
+
+/*//////////////////training styling///////////////////////////*/
+/* 
+.command-container {
+  margin: 20px auto;
+  width: 99vw;
+  height: 70px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 90%;
+  text-align: center;
+}
+.btn-command {
+  justify-content: space-evenly;
+  margin: 190px;
+  align-content: center;
+}
+
+.btn-command {
+  border: none;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.btn-command:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.levelupcnt {
+  display: flex;
+  border-top: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+#level-up {
+  margin: 0 auto;
+} */
+/* testing out diffrent stuff */
+
+.maincontainer {
+  border: 0px solid black;
+  justify-content: space-evenly;
+  position: relative;
+  display: flex;
+  height: 60vh;
+  width: 100vw;
+  margin-top: 40px;
+}
+
+.thecard {
+  position: relative;
+  margin: 10px auto;
+
+  width: 250px;
+  height: 350px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #ffc728;
+  color: #333333;
+  text-align: center;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(241, 193, 193);
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #352a2a;
+  color: #333333;
+  transform: rotateY(180deg);
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  padding: 40px;
+  box-shadow: 15px 15px 30px rgb(241, 193, 193), -15px -15px 30px #bebebe;
 }
