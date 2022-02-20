@@ -492,12 +492,12 @@ input[type="radio"] {
 /* testing out diffrent stuff */
 
 .maincontainer {
-  border: 0px solid black;
+  /* border: 4px solid black; */
   justify-content: space-evenly;
   position: relative;
   display: flex;
-  height: 60vh;
-  width: 100vw;
+  height: 400px;
+  width: 1669px;
   margin-top: 40px;
   margin-left: 30px;
   margin-right: 30px;
@@ -505,7 +505,7 @@ input[type="radio"] {
 
 .thecard {
   position: relative;
-  margin: 10px auto;
+  margin: 10px 20px;
 
   width: 295px;
   height: 350px;
