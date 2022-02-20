@@ -502,7 +502,13 @@ input[type="radio"] {
   margin-left: 30px;
   margin-right: 30px;
 }
-
+.titletext {
+  margin: 9px;
+  text-align: center;
+  /* border: 1px solid black; */
+  padding-left: 190px;
+  padding-right: 190px;
+}
 .thecard {
   position: relative;
   margin: 10px 20px;
