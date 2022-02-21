@@ -1,3 +1,18 @@
+@import url(//db.onlinewebfonts.com/c/e8eeabdb432fa315c990a55cb5f56d57?family=LEMON+MILK);
+@font-face {
+  font-family: "LEMON MILK";
+  src: url("//db.onlinewebfonts.com/t/e8eeabdb432fa315c990a55cb5f56d57.eot");
+  src: url("//db.onlinewebfonts.com/t/e8eeabdb432fa315c990a55cb5f56d57.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/e8eeabdb432fa315c990a55cb5f56d57.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/e8eeabdb432fa315c990a55cb5f56d57.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/e8eeabdb432fa315c990a55cb5f56d57.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/e8eeabdb432fa315c990a55cb5f56d57.svg#LEMON MILK")
+      format("svg");
+}
 * {
   font-family: LEMON MILK;
   box-sizing: border-box;
