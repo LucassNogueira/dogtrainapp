@@ -13,6 +13,9 @@
     url("//db.onlinewebfonts.com/t/e8eeabdb432fa315c990a55cb5f56d57.svg#LEMON MILK")
       format("svg");
 }
+button {
+  cursor: pointer;
+}
 * {
   font-family: LEMON MILK;
   box-sizing: border-box;
@@ -485,7 +488,7 @@ input[type="radio"] {
 .thecard {
   position: relative;
   margin: 10px 20px;
-
+  cursor: pointer;
   width: 295px;
   height: 350px;
   transform-style: preserve-3d;
