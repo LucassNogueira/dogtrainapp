@@ -1,6 +1,5 @@
 .home-body {
   display: flex;
-  /* border: 3px solid black; */
   margin-left: 80px;
   margin-right: 80px;
   margin-top: 50px;
@@ -43,8 +42,9 @@
 }
 .right-cont {
   display: flex;
-  padding: 50px;
-  display: grid;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
   text-align: center;
   width: 70%;
   height: 100%;
@@ -52,4 +52,58 @@
 
 .filler-welcome {
   position: inherit;
+  line-height: 2em;
+  font-size: 18px;
+}
+
+.start-new {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  margin-top: 60px;
+  font-weight: bold;
+  width: 480px;
+  height: 280px;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.start-new::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.start-new:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.start-new:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
 }

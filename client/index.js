@@ -111,6 +111,7 @@ function submitHandler(e) {
   closeForm();
 }
 */
+
 function submitHandler(e) {
   e.preventDefault();
 
@@ -118,20 +119,40 @@ function submitHandler(e) {
   let dogBreed = document.querySelector("#dog-selector");
   let dogLevel = document.querySelector("input[name=skill-level]:checked");
   let imageURL = document.querySelector("#img");
+  let bodyObj = null;
+  if (imageURL.value.length === 0) {
+    console.log("hit1");
+    axios
+      .get(`https://dog.ceo/api/breed/${dogBreed.value}/images/random`)
+      .then((res) => {
+        bodyObj = {
+          name: dogName.value,
+          breed: dogBreed.value,
+          level: dogLevel.value,
+          imageURL: res.data.message,
+        };
 
-  let bodyObj = {
-    name: dogName.value,
-    breed: dogBreed.value,
-    level: dogLevel.value,
-    imageURL: imageURL.value,
-  };
-
-  createDog(bodyObj);
-  closeForm();
-  location.href = "alldogs.html";
+        handleres();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } else {
+    console.log("hit2");
+    bodyObj = {
+      name: dogName.value,
+      breed: dogBreed.value,
+      level: dogLevel.value,
+      imageURL: imageURL.value,
+    };
+    handleres();
+  }
+  function handleres() {
+    createDog(bodyObj);
+    closeForm();
+    location.href = "alldogs.html";
+  }
 }
-
-dogForm.addEventListener("submit", submitHandler);
 
 //
 // FORM FUNCTION
@@ -153,3 +174,5 @@ menu.addEventListener("click", () => {
     menuLinks.classList.remove("active");
   });
 });
+
+dogForm.addEventListener("submit", submitHandler);

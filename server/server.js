@@ -19,10 +19,10 @@ app.use(cors());
 app.use(express.static("client"));
 //
 //
-// app.get("https://dog.ceo/api/breeds/image/random", (req, res) => {
-//   const { message, status } = req.body;
-//   res.send(message);
-// });
+app.get("https://dog.ceo/api/breeds/image/random", (req, res) => {
+  const { message, status } = req.body;
+  res.send(message);
+});
 //
 app.get("/api/train/:dogId", trainDog);
 //
