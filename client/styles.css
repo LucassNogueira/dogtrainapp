@@ -330,20 +330,20 @@ input[type="radio"] {
 }
 
 .timer {
-  margin: 0 auto;
+  margin-top: 20px;
   background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(241, 193, 193);
-
+  margin-left: 170px;
+  width: 400px;
   border: 3px solid black;
   font-family: sans-serif;
   display: inline-flex;
-  padding: 24px 32px;
+  padding: 24px 55px;
   border-radius: 30px;
   align-items: center;
 }
 
 .timer__part {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: bold;
 }
 
@@ -445,52 +445,6 @@ input[type="radio"] {
 }
 
 /*//////////////////training styling///////////////////////////*/
-/* 
-.command-container {
-  margin: 20px auto;
-  width: 99vw;
-  height: 70px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  max-width: 90%;
-  text-align: center;
-}
-.btn-command {
-  justify-content: space-evenly;
-  margin: 190px;
-  align-content: center;
-}
-
-.btn-command {
-  border: none;
-  color: #090909;
-  padding: 0.7em 1.7em;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-}
-
-.btn-command:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-}
-
-.levelupcnt {
-  display: flex;
-  border-top: 1px solid black;
-  width: 100px;
-  height: 100px;
-}
-#level-up {
-  margin: 0 auto;
-} */
-/* testing out diffrent stuff */
-
 .maincontainer {
   /* border: 4px solid black; */
   justify-content: space-evenly;
@@ -503,11 +457,14 @@ input[type="radio"] {
   margin-right: 30px;
 }
 .titletext {
-  margin: 9px;
+  margin-top: 5px;
+  margin-left: 30px;
+  width: 835px;
+  margin-right: 30px;
   text-align: center;
   /* border: 1px solid black; */
-  padding-left: 190px;
-  padding-right: 190px;
+  padding-left: 19px;
+  padding-right: 19px;
 }
 .thecard {
   position: relative;
@@ -519,7 +476,7 @@ input[type="radio"] {
   transition: all 0.5s ease;
 }
 
-.thecard:hover {
+.thecard.flip {
   transform: rotateY(180deg);
 }
 
@@ -556,4 +513,107 @@ input[type="radio"] {
   color: white;
   padding: 40px;
   box-shadow: 15px 15px 30px rgb(241, 193, 193), -15px -15px 30px #bebebe;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+}
+
+/*   level up button  */
+.wrap {
+  margin: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lvlup {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4fd1c5;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 230, 217, 1) 0%,
+    rgba(79, 209, 197, 1) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+.lvlup::before {
+  content: "";
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00ffcb;
+  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.lvlup:hover,
+.lvlup:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.lvlup:hover::before,
+.lvlup:focus::before {
+  opacity: 1;
+}
+
+.lvlup::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  border: 6px solid #00ffcb;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.lvlup:hover::after,
+.lvlup:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+.goodbye {
+  text-align: center;
+  width: 100%;
 }

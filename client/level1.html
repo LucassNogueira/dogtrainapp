@@ -44,18 +44,21 @@
         </ul>
       </nav>
     </header>
-    <div class="titletext">
-      <h1>Training Level 1</h1>
-      <br />
-      <p>
-        Pup training should be dont in sessions no longer than 30 min untill
-        level 4. Completing commands in one session does not warrent a level up,
-        spend at minium 10 sessions on each level.
-      </p>
+    <div class="topbar">
+      <div class="titletext">
+        <h1>Training Level 1</h1>
+        <br />
+        <p>
+          Training should be done in sessions no longer than 25 min untill level
+          4. Completing commands in one session does not warrent a level up,
+          spend at minium 10 sessions on each level. Aim for 2 sessions per day
+          minium. Click any command card to see a description of command!
+        </p>
+      </div>
+      <container class="timer"> </container>
     </div>
-
     <div class="maincontainer">
-      <div class="thecard">
+      <div id="card1" class="thecard">
         <div class="thefront">
           <!-- <h1>Come</h1> -->
           <img class="commandimg" src="images/come.png" />
@@ -68,7 +71,7 @@
           </p>
         </div>
       </div>
-      <div class="thecard">
+      <div id="card2" class="thecard">
         <div class="thefront">
           <!-- <h1>Sit</h1> -->
           <img class="commandimg" src="images/sit.png" />
@@ -81,7 +84,7 @@
           </p>
         </div>
       </div>
-      <div class="thecard">
+      <div id="card3" class="thecard">
         <div class="thefront">
           <!-- <h1>Shake</h1></div> -->
           <img class="commandimg" src="images/high5.png" />
@@ -95,31 +98,11 @@
         </div>
       </div>
     </div>
+    <div class="wrap">
+      <button id="level-up" class="lvlup" type="button">Level Up</button>
+    </div>
 
-    <!-- <main class="command-container">
-      <container id="btn-container">
-        <button id="come-command" class="btn-command" type="button">
-          Come
-        </button>
-        <container id="come-cnt"></container>
-
-        <button id="sit-command" class="btn-command" type="button">Sit</button>
-        <container id="sit-cnt"></container>
-
-        <button id="shake-command" class="btn-command" type="button">
-          Shake
-        </button>
-        <container id="shake-cnt"></container>
-      </container>
-    </main> -->
-    <!-- <div class="levelupcnt">
-      <button id="level-up" type="button">Level Up</button>
-    </div> -->
-    <!-- <div class="timer">
-      <container class="timer"> </container>
-    </div> -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <script src="./level.js"></script>
   </body>
 </html>

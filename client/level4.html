@@ -44,16 +44,64 @@
         </ul>
       </nav>
     </header>
-    <container id="level1btns">
-      <button id="come-command" type="button">Sit</button>
-      <container id="come-cnt"></container>
-      <button id="sit-command" type="button">Shake</button>
-      <container id="sit-cnt"></container>
-      <button id="shake-command" type="button">Down</button>
-      <container id="shake-cnt"></container>
-    </container>
-    <h3><button id="level-up" type="button">Level Up</button></h3>
-    <container class="timer"> </container>
+    <div class="topbar">
+      <div class="titletext">
+        <h1>Training Level 4</h1>
+        <br />
+        <p>
+          Welcome to level 4 training! You and your pup sure have come a long
+          way. Sessions can now range between 30-45 min, but it will depend on
+          the temperment of your dog. Keep sessions at 3 per day max, remeber to
+          click the cards for a description of the commands youre working on!
+        </p>
+      </div>
+      <container class="timer"> </container>
+    </div>
+    <div class="maincontainer">
+      <div id="card1" class="thecard">
+        <div class="thefront">
+          <!-- <h1>Come</h1> -->
+          <img class="commandimg" src="images/roll.png" />
+        </div>
+        <div class="theback">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            rem hic voluptatibus. Cupiditate natus ipsum dolorem voluptate
+            debitis. Accusantium, blanditiis?
+          </p>
+        </div>
+      </div>
+      <div id="card2" class="thecard">
+        <div class="thefront">
+          <!-- <h1>Sit</h1> -->
+          <img class="commandimg" src="images/spin.png" />
+        </div>
+        <div class="theback">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            rem hic voluptatibus. Cupiditate natus ipsum dolorem voluptate
+            debitis. Accusantium, blanditiis?
+          </p>
+        </div>
+      </div>
+      <div id="card3" class="thecard">
+        <div class="thefront">
+          <!-- <h1>Shake</h1></div> -->
+          <img class="commandimg" src="images/down.png" />
+        </div>
+        <div class="theback">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            rem hic voluptatibus. Cupiditate natus ipsum dolorem voluptate
+            debitis. Accusantium, blanditiis?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <button id="level-up" class="lvlup" type="button">Level Up</button>
+    </div>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./level.js"></script>
   </body>
