@@ -503,22 +503,31 @@ input[type="radio"] {
 }
 .theback {
   position: absolute;
+  display: flex;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   background: #352a2a;
   color: #333333;
   transform: rotateY(180deg);
+  line-height: 30px;
+  align-items: center;
+  vertical-align: middle;
   text-align: center;
   border-radius: 30px;
   color: white;
-  padding: 40px;
+  text-size-adjust: auto;
+  padding: 10px;
+  padding-block: 10px;
   box-shadow: 15px 15px 30px rgb(241, 193, 193), -15px -15px 30px #bebebe;
 }
-
+#commandtext {
+  justify-content: center;
+}
 .topbar {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 /*   level up button  */
