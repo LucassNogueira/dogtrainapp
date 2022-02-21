@@ -1,8 +1,10 @@
 const dogForm = document.querySelector("#dog-form");
 const dogContainer = document.querySelector("#current-dogs");
 const getDogsbtn = document.querySelector("#seeallbtn");
+let dogBreed = document.querySelector("#dog-selector");
 const dogArrCallback = ({ data: Dogs }) => displayDogs(Dogs);
 /////////////////////////////////
+
 const deleteDog = (id) => {
   axios.delete(`/api/${id}`).then(dogArrCallback);
 };
@@ -10,7 +12,7 @@ const deleteDog = (id) => {
 const train = (id) => {
   axios.get(`/api/train/${id}`).then((res) => {
     let level = res.data.level;
-    // console.log(level);
+
     if (level == 1) {
       window.location.href = `/level1.html?dogId=${id}`;
     } else if (level == 2) {
@@ -116,7 +118,6 @@ function submitHandler(e) {
   e.preventDefault();
 
   let dogName = document.querySelector("#dog-name");
-  let dogBreed = document.querySelector("#dog-selector");
   let dogLevel = document.querySelector("input[name=skill-level]:checked");
   let imageURL = document.querySelector("#img");
   let bodyObj = null;
