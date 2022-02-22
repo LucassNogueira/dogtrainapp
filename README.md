@@ -2,14 +2,14 @@
 
 ---
 
-#h1 Project Description
+# H1 Project Description
 
 -PogDog is a webapp created in order to aid useres in basic obedience training for their dog.
 -I created the app because i recently got a puppy and have been spending countless hours training him and see a need for a resource like this.
 
 ---
 
-#h1 Technology used
+# H1 Technology used
 
 -Java Script
 -HTML
@@ -19,7 +19,7 @@
 
 ---
 
-#h1 Aplication Features
+# H1 Aplication Features
 
 - Users are able to create a profile for their dog
 - Users are able to see a spread of all the dogs they are currently training
