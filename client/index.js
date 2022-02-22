@@ -51,21 +51,6 @@ const createDog = (body) => {
   });
 };
 
-//////////////////ADDING IMAGE//////////////////////////
-
-// const imageInput = document.querySelector("#imageInput");
-// let uploadedImage;
-
-// imageInput.addEventListener("change", function () {
-//   const reader = new FileReader();
-//   reader.addEventListener("load", () => {
-//     uploadedImage = reader.result;
-//     document.querySelector(
-//       "#displayImage"
-//     ).style.backgroundImage = `url(${uploadedImage})`;
-//   });
-//   reader.readAsDataURL(this.files[0]);
-// });
 ////////////CREATING DOG CARD////////
 
 function createDogCard(newDog) {
@@ -83,36 +68,6 @@ function createDogCard(newDog) {
 }
 ////////////////////////////////
 getDogsbtn.addEventListener("click", getAllDogs);
-
-/*// processing submit data AXIOS////
-function submitHandler(e) {
-  e.preventDefault();
-
-  let dogName = document.querySelector("#dog-name");
-  let dogBreed = document.querySelector("#dog-selector");
-  let dogLevel = document.querySelector(
-    "input[name=skill-level]:checked"
-  ).value;
-  let bodyObj = {
-    name: dogName.value,
-    breed: dogBreed.value,
-    level: dogLevel,
-    imageURL: "",
-  };
-  axios
-    .get(`https://dog.ceo/api/breed/${dogBreed.value}/images/random`)
-    .then((res) => {
-      bodyObj.imageURL = res.data.message;
-      // console.log(bodyObj);
-      createDog(bodyObj);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-
-  closeForm();
-}
-*/
 
 function submitHandler(e) {
   e.preventDefault();

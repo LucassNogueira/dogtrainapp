@@ -1,8 +1,3 @@
-////////////////////////////////
-////////////////////////////////
-////////////////////////////////
-////////////////////////////////
-
 const incLevel = () => {
   let dogId = window.location.href.substring(window.location.href.length - 1);
   axios
@@ -12,8 +7,6 @@ const incLevel = () => {
     })
     .catch((err) => console.log(err));
 };
-
-// levelUpBtn.addEventListener("click", incLevel);
 
 const Confirm = {
   open(options) {
