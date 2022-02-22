@@ -1,6 +1,6 @@
 ﻿# PogDog
 
-![PogDog Homepage](../Homepage.PNG "Homepage")
+![PogDog Homepage](client/images/Homepage.PNG "Homepage")
 
 ## Project Description
 
