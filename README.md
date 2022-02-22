@@ -1,7 +1,5 @@
 ﻿# PogDog
 
----
-
 ## Project Description
 
 -PogDog is a webapp created in order to aid useres in basic obedience training for their dog.
