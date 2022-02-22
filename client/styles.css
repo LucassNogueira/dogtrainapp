@@ -93,6 +93,7 @@ button {
     position: absolute;
     top: 80px;
     left: -100%;
+
     opacity: 0;
     transition: all 0.5s ease;
   }
@@ -109,6 +110,7 @@ button {
   }
 
   .nav-links {
+    padding-left: 40px;
     text-align: center;
     line-height: 60px;
     width: 100%;
