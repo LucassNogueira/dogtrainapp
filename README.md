@@ -13,9 +13,9 @@
 - Axios
 - Dog API
 
-## Aplication Features
+## Application Features
 
 - Users are able to create a profile for their dog
 - Users are able to see a spread of all the dogs they are currently training
 - Users can train a specific dog and be shown commands depending on what level they are
-- Dogs can independintly level and train
+- Dogs can independently level and train
